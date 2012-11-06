@@ -104,13 +104,6 @@ private:
 			m_locker(other.m_locker)
 		{}
 
-		inline XnLockedServerStreamsHash& operator=(const XnLockedServerStreamsHash& other)
-		{
-			this->m_hash = other.m_hash;
-			this->m_locker = other.m_locker;
-			return *this;
-		}
-
 		inline _XnServerStreamsHash::Iterator begin()
 		{
 			return m_hash.begin();
