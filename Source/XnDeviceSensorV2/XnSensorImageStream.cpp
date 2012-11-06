@@ -214,6 +214,14 @@ XnStatus XnSensorImageStream::Init()
 		nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_YUV422, XN_RESOLUTION_VGA, 30);
 		XN_IS_STATUS_OK(nRetVal);
 
+		// Enable Bayer images
+		nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_BAYER, XN_RESOLUTION_QVGA, 30);
+		XN_IS_STATUS_OK(nRetVal);
+		nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_BAYER, XN_RESOLUTION_QVGA, 60);
+		XN_IS_STATUS_OK(nRetVal);
+		nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_BAYER, XN_RESOLUTION_VGA, 30);
+		XN_IS_STATUS_OK(nRetVal);
+
 		// add uncompressed ones
 		if (bUncompressedAllowed)
 		{
@@ -222,6 +230,16 @@ XnStatus XnSensorImageStream::Init()
 			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_YUV422, XN_RESOLUTION_QVGA, 60);
 			XN_IS_STATUS_OK(nRetVal);
 			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_YUV422, XN_RESOLUTION_VGA, 30);
+			XN_IS_STATUS_OK(nRetVal);
+
+			// Enable umcompressed Bayer
+			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_BAYER, XN_RESOLUTION_SXGA, 15);
+			XN_IS_STATUS_OK(nRetVal);
+			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_BAYER, XN_RESOLUTION_VGA, 30);
+			XN_IS_STATUS_OK(nRetVal);
+			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_BAYER, XN_RESOLUTION_QVGA, 60);
+			XN_IS_STATUS_OK(nRetVal);
+			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_BAYER, XN_RESOLUTION_QVGA, 30);
 			XN_IS_STATUS_OK(nRetVal);
 		}
 
@@ -233,11 +251,21 @@ XnStatus XnSensorImageStream::Init()
 			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_YUV422, XN_RESOLUTION_VGA, 25);
 			XN_IS_STATUS_OK(nRetVal);
 
+			// Enable Bayer
+			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_BAYER, XN_RESOLUTION_QVGA, 25);
+			XN_IS_STATUS_OK(nRetVal);
+			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_BAYER, XN_RESOLUTION_VGA, 25);
+			XN_IS_STATUS_OK(nRetVal);
+
 			if (bUncompressedAllowed)
 			{
 				nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_YUV422, XN_RESOLUTION_QVGA, 25);
 				XN_IS_STATUS_OK(nRetVal);
 				nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_YUV422, XN_RESOLUTION_VGA, 25);
+				XN_IS_STATUS_OK(nRetVal);
+				nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_BAYER, XN_RESOLUTION_QVGA, 25);
+				XN_IS_STATUS_OK(nRetVal);
+				nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_BAYER, XN_RESOLUTION_VGA, 25);
 				XN_IS_STATUS_OK(nRetVal);
 			}
 		}
@@ -255,10 +283,14 @@ XnStatus XnSensorImageStream::Init()
 			{
 				nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_YUV422, XN_RESOLUTION_SXGA, 30);
 				XN_IS_STATUS_OK(nRetVal);
+				nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_BAYER, XN_RESOLUTION_SXGA, 30);
+				XN_IS_STATUS_OK(nRetVal);
 
 				if (bUncompressedAllowed)
 				{
 					nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_YUV422, XN_RESOLUTION_SXGA, 30);
+					XN_IS_STATUS_OK(nRetVal);
+					nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_UNCOMPRESSED_BAYER, XN_RESOLUTION_SXGA, 30);
 					XN_IS_STATUS_OK(nRetVal);
 				}
 			}
