@@ -469,9 +469,6 @@ XnStatus XnSensorIO::SetCallback(XnUSBEventCallbackFunctionPtr pCallbackPtr, voi
 	//TODO: Support multiple sensors - this won't work for more than one.
 	XnStatus nRetVal = XN_STATUS_OK;
 	
-	// try to register callback to a 5.0 device
-	nRetVal = xnUSBSetCallbackHandler(XN_SENSOR_VENDOR_ID, XN_SENSOR_5_0_PRODUCT_ID, NULL, pCallbackPtr, pCallbackData);
-
 	return nRetVal;
 }
 
