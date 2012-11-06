@@ -225,8 +225,8 @@ XnStatus XnSensorImageStream::Init()
 			XN_IS_STATUS_OK(nRetVal);
 		}
 
-		// starting with FW 5.2, 25 FPS is also supported
-		if (m_Helper.GetFirmwareVersion() >= XN_SENSOR_FW_VER_5_2)
+		// starting with FW 5.1, 25 FPS is also supported
+		if (m_Helper.GetFirmwareVersion() >= XN_SENSOR_FW_VER_5_1)
 		{
 			nRetVal = AddSupportedMode(supportedModes, XN_IO_IMAGE_FORMAT_YUV422, XN_RESOLUTION_QVGA, 25);
 			XN_IS_STATUS_OK(nRetVal);
