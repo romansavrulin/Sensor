@@ -30,6 +30,7 @@
 // Defines
 //---------------------------------------------------------------------------
 #define XN_SENSOR_VENDOR_ID			0x1D27
+#define XN_SENSOR_2_0_PRODUCT_ID	0x0200
 #define XN_SENSOR_5_0_PRODUCT_ID	0x0500
 #define XN_SENSOR_6_0_PRODUCT_ID	0x0600
 #define XN_SENSOR_6_0_1_PRODUCT_ID	0x0601
@@ -410,6 +411,11 @@ XnStatus XnSensorIO::EnumerateSensors(XnConnectionString* aConnectionStrings, Xn
 	// search for a v5.0 device
 	nRetVal = Enumerate(XN_SENSOR_VENDOR_ID, XN_SENSOR_5_0_PRODUCT_ID, devicesSet);
 	XN_IS_STATUS_OK(nRetVal);
+
+	// try searching for an older device
+	nRetVal = Enumerate(XN_SENSOR_VENDOR_ID, XN_SENSOR_2_0_PRODUCT_ID, devicesSet);
+	XN_IS_STATUS_OK(nRetVal);
+
 #endif
 	
 	// now copy back
