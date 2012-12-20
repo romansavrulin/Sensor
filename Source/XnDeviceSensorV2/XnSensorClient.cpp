@@ -883,7 +883,7 @@ XnStatus XnSensorClient::StartServerProcess()
 #if (XN_PLATFORM == XN_PLATFORM_WIN32)
 	nRetVal = GetModuleDir(strServerDir);
 #elif (XN_PLATFORM == XN_PLATFORM_LINUX_X86 || XN_PLATFORM == XN_PLATFORM_LINUX_ARM || XN_PLATFORM == XN_PLATFORM_MACOSX)
-	sprintf(strServerDir, "/usr/bin");
+	sprintf(strServerDir, "/usr/lib/libopenni-sensor-primesense0");
 #endif
 
 	XnChar strProcessName[XN_FILE_MAX_PATH];
