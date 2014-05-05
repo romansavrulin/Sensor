@@ -35,7 +35,7 @@
 #define XN_SENSOR_6_0_PRODUCT_ID	0x0600
 #define XN_SENSOR_6_0_1_PRODUCT_ID	0x0601
 #define XN_SENSOR_MSK_VENDOR_ID	0x045E
-#define XN_SENSOR_MSK_PRODUCT_ID	0x045E
+#define XN_SENSOR_MSK_PRODUCT_ID	0x02AE
 
 //---------------------------------------------------------------------------
 // Enums
